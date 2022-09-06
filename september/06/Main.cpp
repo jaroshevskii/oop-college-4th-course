@@ -41,7 +41,7 @@ private:
 
       int value = 0;
       while (true) {
-        std::cout << "  Gender = ";
+        std::cout << "> Gender = ";
         std::cin >> value;
 
         switch (value) {
@@ -127,12 +127,12 @@ public:
   }
 
   /// Prints women who have been working for at least 2 years and over 30 years.
-  void printSpecialEmployers() {
+  void printSpecialEmployers() const {
     // Used for calculations.
     const int currentYear = 2022;
 
     for (const auto &employer : employers) {
-      // Prints if the worker fits the condition.
+      // Prints employer if the worker fits the condition.
       if (employer.getFirstName() == "Woman" &&
           currentYear - employer.getYearOfEmployment() >= 2 &&
           currentYear - employer.getYearOfBirth() >= 30) {
