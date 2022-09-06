@@ -1,0 +1,15 @@
+# Temp folder
+temp/*
+
+# Build folder
+build/*
+
+# VS Code files
+.vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
+
+# Cache files
+.cache/*
