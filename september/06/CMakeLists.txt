@@ -1,3 +1,3 @@
-project(September06)
+project(September6)
 
-add_executable(september06 Main.cpp)
+add_executable(September6 Main.cpp)

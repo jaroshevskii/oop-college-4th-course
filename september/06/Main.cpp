@@ -5,8 +5,8 @@
 /// Offece.
 class Office {
 private:
-  /// Employer.
-  class Employer {
+  /// employee.
+  class Employee {
   private:
     std::string firstName;
     std::string lastName;
@@ -75,7 +75,7 @@ private:
     }
 
   public:
-    Employer() {
+    Employee() {
       std::cout << "> First name = ";
       std::cin >> firstName;
       std::cout << "> Last name = ";
@@ -108,51 +108,60 @@ private:
       std::cout << firstName << ' ' << lastName << ":\n"
                 << "  Year of birth:      " << yearOfBirth << '\n'
                 << "  Gender:             " << gender << '\n'
-                << "  Year of employment: " << yearOfEmployment << '\n';
+                << "  Year of employment: " << yearOfEmployment << "\n\n";
     }
   };
 
-  std::vector<Employer> employers;
+  std::vector<Employee> employees;
 
 public:
   /// Adds an employee.
-  void addEmployer() { employers.push_back(Employer()); }
+  void addemployee() { employees.push_back(Employee()); }
 
   /// Prints employees.
-  void printEmployers() const {
-    for (const auto &employer : employers) {
-      employer.print();
-      std::cout << '\n';
+  void printemployees() const {
+    for (const auto &employee : employees) {
+      employee.print();
     }
   }
 
   /// Prints women who have been working for at least 2 years and over 30 years.
-  void printSpecialEmployers() const {
+  void printSpecialEmployees() const {
     // Used for calculations.
     const int currentYear = 2022;
 
-    for (const auto &employer : employers) {
-      // Prints employer if the worker fits the condition.
-      if (employer.getFirstName() == "Woman" &&
-          currentYear - employer.getYearOfEmployment() >= 2 &&
-          currentYear - employer.getYearOfBirth() >= 30) {
-        employer.print();
+    bool foundAtLeastOneEmployee = false;
+
+    for (const auto &employee : employees) {
+      // Prints employee if the worker fits the condition.
+      if (employee.getGender() == "Woman" &&
+          currentYear - employee.getYearOfEmployment() >= 2 &&
+          currentYear - employee.getYearOfBirth() >= 30) {
+        foundAtLeastOneEmployee = true;
+        employee.print();
       }
+
+      std::cout << (employee.getGender() == "Woman") << '\n'
+                << currentYear - employee.getYearOfEmployment() << '\n'
+                << currentYear - employee.getYearOfBirth() << '\n';
     }
-    std::cout << '\n';
+
+    if (!foundAtLeastOneEmployee) {
+      std::cout << "Note: No special eployee found.\n\n";
+    }
   }
 };
 
 int main() {
   Office office;
-  bool isPrintMenu = true;
+  bool printMenu = true;
 
   while (true) {
-    if (isPrintMenu) {
+    if (printMenu) {
       std::cout << "> Menu:\n"
-                << "    1. Add a worker\n"
-                << "    2. Pint workers\n"
-                << "    3. Prints women who have been working for at least 2 "
+                << "    1. Add employee\n"
+                << "    2. Print employees\n"
+                << "    3. Print women who have been working for at least 2 "
                    "years and over 30 years\n"
                 << "    4. Exit\n";
     }
@@ -163,24 +172,25 @@ int main() {
 
     if (choise >= 1 && choise <= 3) {
       std::cout << '\n';
-      isPrintMenu = true;
+      printMenu = true;
     }
 
     switch (choise) {
     case 1:
-      office.addEmployer();
+      office.addemployee();
       break;
     case 2:
-      office.printEmployers();
+      office.printemployees();
       break;
     case 3:
-      office.printSpecialEmployers();
+      office.printSpecialEmployees();
       break;
     case 4: // Exit.
+      std::cout << "\nGoodbye ;)\n";
       return 0;
     default:
       std::cerr << "Error: I'm sorry, but these are all available choises.\n";
-      isPrintMenu = false;
+      printMenu = false;
       break;
     }
   }
