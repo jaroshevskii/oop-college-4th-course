@@ -59,7 +59,9 @@ jaroshevskii@archlinux % /path/to/app/dir/September6
     3. Pickle (for other people)
 > Gender = 3
 > Year of birth = 0
+
 Hello Jesus.
+
 > Year of employment = 22  
 ```
 
