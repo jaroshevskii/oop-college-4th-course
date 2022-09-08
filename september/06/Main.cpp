@@ -5,7 +5,7 @@
 /// Offece.
 class Office {
 private:
-  /// employee.
+  /// Employee.
   class Employee {
   private:
     std::string firstName;
@@ -25,7 +25,7 @@ private:
           return value;
         }
         if (value == 0) {
-          std::cout << "Note: Hello Jesus.\n";
+          std::cout << "\nHello Jesus.\n\n";
           return value;
         }
         std::cerr << "Error: I doubt that you were born before 1900.\n";
@@ -133,7 +133,7 @@ public:
     bool foundAtLeastOneEmployee = false;
 
     for (const auto &employee : employees) {
-      // Prints employee if the worker fits the condition.
+      // Print employee if the he fits the condition.
       if (employee.getGender() == "Woman" &&
           currentYear - employee.getYearOfEmployment() >= 2 &&
           currentYear - employee.getYearOfBirth() >= 30) {
@@ -170,7 +170,7 @@ int main() {
     int choise = 0;
     std::cin >> choise;
 
-    if (choise >= 1 && choise <= 3) {
+    if (choise >= 1 && choise <= 4) {
       std::cout << '\n';
       printMenu = true;
     }
@@ -186,7 +186,7 @@ int main() {
       office.printSpecialEmployees();
       break;
     case 4: // Exit.
-      std::cout << "\nGoodbye ;)\n";
+      std::cout << "Goodbye ;)\n";
       return 0;
     default:
       std::cerr << "Error: I'm sorry, but these are all available choises.\n";
