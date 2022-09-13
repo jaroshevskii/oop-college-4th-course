@@ -1,4 +1,4 @@
-# Вересень 6
+# Практична робота 2
 
 ## Завдання
 
@@ -21,7 +21,7 @@
 Запустіть Terminal та ведіть шлях до програми:
 
 ```
-jaroshevskii@archlinux % /path/to/app/dir/September6
+$ /path/to/app/dir/PracticalWork2
 ```
 
 ### Додавання працівників

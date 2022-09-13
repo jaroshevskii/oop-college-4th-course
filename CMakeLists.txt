@@ -6,9 +6,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_subdirectory(september)
+add_subdirectory(practical-work2)
 
 add_custom_target(OOPCollege3rdCourse)
 add_dependencies(OOPCollege3rdCourse
-  September
+  PracticalWork2
 )
