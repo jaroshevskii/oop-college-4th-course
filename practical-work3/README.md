@@ -28,5 +28,5 @@
 Запустіть Terminal та ведіть шлях до програми:
 
 ```
-$ /path/to/app/dir/September6
+$ /path/to/app/dir/PracticalWork3
 ```
