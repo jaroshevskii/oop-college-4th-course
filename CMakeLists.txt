@@ -8,9 +8,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(practical-work2)
 add_subdirectory(practical-work3)
+add_subdirectory(practical-work4)
 
 add_custom_target(OOPCollege3rdCourse)
 add_dependencies(OOPCollege3rdCourse
   PracticalWork2
   PracticalWork3
+  PracticalWork4
 )
