@@ -1,4 +1,3 @@
-#include <ios>
 #include <iostream>
 
 class Complex {
@@ -45,10 +44,10 @@ public:
 };
 
 int main() {
-  Complex a(1.1, 2.2);
-  Complex b(3.3, 4.4);
-  Complex c(5.5, 6.6);
-  Complex d(7.7, 8.8);
+  const Complex a(1.1, 2.2);
+  const Complex b(3.3, 4.4);
+  const Complex c(5.5, 6.6);
+  const Complex d(7.7, 8.8);
   bool printMenu = true;
 
   while (true) {
