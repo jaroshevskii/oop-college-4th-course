@@ -57,6 +57,7 @@ public:
     return Matrix(resultArray2d);
   }
 
+  /// Note: The function does not correctly add matrices with different sizes.
   Matrix operator*(const Matrix &matrix) const {
     if (rowsCount != matrix.rowsCount) {
       std::cerr
