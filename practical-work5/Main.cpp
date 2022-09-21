@@ -116,10 +116,21 @@ public:
       }
     }
   }
+
+  void transpose() {
+    Array2d resultArray2d(rowsCount, Array(colsCount, 0));
+    for (int i = 0; i < rowsCount; ++i) {
+      for (int j = 0; j < colsCount; ++j) {
+        resultArray2d[j][i] = array2d[i][j];
+      }
+    }
+    array2d = resultArray2d;
+  }
 };
 
 int main() {
-  const Matrix<int> a({{1, 2, 3}, {1, 2, 3}, {1, 2, 3}});
+  Matrix<int> a({{1, 2, 3}, {1, 2, 3}, {1, 2, 3}});
+  a.transpose();
   a.print();
 
   const Matrix<int> b({{1, 2, 3}, {1, 2, 3}, {1, 2, 3}});
