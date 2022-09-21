@@ -17,7 +17,7 @@ public:
   Matrix(const Array2d &array2d) : array2d(array2d) {}
 
   Matrix(int rowsCount, int colsCount)
-      : array2d(rowsCount, Array(colsCount, 0)) {}
+      : array2d(rowsCount, Array(colsCount)) {}
 
   ~Matrix() = default;
 
@@ -118,7 +118,7 @@ public:
   }
 
   void transpose() {
-    Array2d resultArray2d(rowsCount, Array(colsCount, 0));
+    Array2d resultArray2d(rowsCount, Array(colsCount));
     for (int i = 0; i < rowsCount; ++i) {
       for (int j = 0; j < colsCount; ++j) {
         resultArray2d[j][i] = array2d[i][j];
