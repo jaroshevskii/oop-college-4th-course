@@ -9,7 +9,7 @@ public:
 private:
   Array2d array2d;
   int rowsCount = array2d.size();
-  int colsCount = array2d.front().size();
+  int colsCount = array2d.size() > 0 ? array2d.front().size() : 0;
 
 public:
   Matrix() = default;
@@ -17,7 +17,7 @@ public:
   Matrix(const Array2d &array2d) : array2d(array2d) {}
 
   Matrix(int rowsCount, int colsCount)
-      : array2d(rowsCount, Array(colsCount)) {}
+      : array2d(rowsCount, Array(colsCount, 0)) {}
 
   ~Matrix() = default;
 
@@ -118,7 +118,7 @@ public:
   }
 
   void transpose() {
-    Array2d resultArray2d(rowsCount, Array(colsCount));
+    Array2d resultArray2d(rowsCount, Array(colsCount, 0));
     for (int i = 0; i < rowsCount; ++i) {
       for (int j = 0; j < colsCount; ++j) {
         resultArray2d[j][i] = array2d[i][j];
@@ -138,5 +138,7 @@ int main() {
 
   const auto c = a * b;
   c.print();
+
+  Matrix<int> aaa;
   return 0;
 }
