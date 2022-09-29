@@ -11,10 +11,14 @@ add_subdirectory(practical-work3)
 add_subdirectory(practical-work4)
 add_subdirectory(practical-work5)
 
+add_subdirectory(practice)
+
 add_custom_target(OOPCollege3rdCourse)
 add_dependencies(OOPCollege3rdCourse
   PracticalWork2
   PracticalWork3
   PracticalWork4
   PracticalWork5
+
+  Practice
 )
