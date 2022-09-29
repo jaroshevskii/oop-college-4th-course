@@ -22,10 +22,10 @@ private:
     int numberOfDaysYouNeedToComplete = 0;
     int numberOfDaysYouComplete = 0;
 
-    // Time worked.
+    // For time worked.
     int hoursWorked = 0;
 
-    // Percentage of profit received.
+    // For percentage of profit received.
     double amountOfProfit = 0.0;
 
     double salary = 0.0;
@@ -93,6 +93,7 @@ private:
       case PercentageOfProfitReceived: {
         const double persent = 50.0;
         salary = persent / 100.0 * amountOfProfit;
+        break;
       }
       }
 
