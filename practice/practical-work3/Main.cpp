@@ -12,7 +12,7 @@ public:
     double y = 0.0;
 
     double distanceTo(const Point &point) const {
-      return std::sqrt(std::pow(point.x - x, 2) + pow(point.y - y, 2));
+      return std::sqrt(std::pow(point.x - x, 2) + std::pow(point.y - y, 2));
     }
   };
 
