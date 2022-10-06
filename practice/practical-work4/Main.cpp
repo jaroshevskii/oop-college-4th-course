@@ -1,7 +1,5 @@
-#include <cerrno>
 #include <cmath>
 #include <iostream>
-#include <random>
 #include <vector>
 
 /// Prism.
