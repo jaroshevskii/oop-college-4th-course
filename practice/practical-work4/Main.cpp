@@ -20,7 +20,7 @@ public:
               << "Faces count:  " << facesCount << "\n\n";
   }
 
-  double areaSide() const { return sidesLength * facesCount * height; }
+  double areaSide() const { return sidesLength * height * facesCount; }
 
   double areaBase() const {
     return (facesCount * std::pow(sidesLength, 2)) /
@@ -28,12 +28,15 @@ public:
   }
 
   double area() const { return areaSide() + 2 * areaBase(); }
+
+  double volume() const { return height * areaBase(); }
 };
 
 int main() {
   const Prism prism(10.0, 10.0, 3);
   prism.print();
 
-  std::cout << "Area: " << prism.area() << "\n\n";
+  std::cout << "Area:   " << prism.area() << '\n'
+            << "Volume: " << prism.volume() << "\n\n";
   return 0;
 }
