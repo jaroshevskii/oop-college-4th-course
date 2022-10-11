@@ -70,7 +70,7 @@ for _ in 1...trapezesCount {
 var areaAverageSum: Double {
   var areaSum = 0.0
   for trapeze in trapezes {
-    areaSum += trapeze.area();
+    areaSum += trapeze.area()
   }
   return areaSum / Double(trapezesCount)
 }
