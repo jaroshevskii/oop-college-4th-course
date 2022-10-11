@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(OOPCollege3rdCourse)
+project(OOPCollege3rdCourse
+  LANGUAGES CXX Swift
+)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
