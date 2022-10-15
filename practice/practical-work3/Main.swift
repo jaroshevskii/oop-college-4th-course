@@ -1,4 +1,5 @@
 //
+// Object-oriented programing (college 4th course)
 // Practice: Practical work 3
 //
 
