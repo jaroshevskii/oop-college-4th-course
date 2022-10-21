@@ -155,9 +155,9 @@ int main() {
         << "> Menu:\n"
         << "    1. Add truck\n"
         << "    2. Print trucks\n"
-        << "    3. Print trucks with a given type of cargo\n"
-        << "    4. Print sorted by distance of transportation\n"
-        << "    5. Print trucks which have a mass greater than the given\n"
+        << "    3. Print trucks with a given cargo type\n"
+        << "    4. Print sorted trucks by transportation distance\n"
+        << "    5. Print trucks which have a cargo mass greater than the given\n"
         << "    6. Exit\n";
     const int choise = readInt(0, 6);
     std::cout << '\n';
