@@ -190,7 +190,6 @@ int main() {
     }
     case 6: // Exit.
       std::cout << "  (* ^ ω ^) goodbye \n\n";
-
       return 0;
     }
   }
