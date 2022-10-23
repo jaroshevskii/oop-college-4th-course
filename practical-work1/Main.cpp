@@ -1,3 +1,8 @@
+//
+// Object-oriented programing (college 4th course)
+// Practical work 1
+//
+
 #include <cmath>
 #include <iostream>
 
