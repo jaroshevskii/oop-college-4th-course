@@ -153,6 +153,8 @@ public:
       }
     }
   }
+  
+  bool isEmpty() const { return trains.empty(); }
 };
 
 int main() {
@@ -187,14 +189,16 @@ int main() {
       break;
     case 3: {
       int number = 0;
-      while (true) {
-        std::cout << "> Number = ", std::cin >> number;
-        if (number > 0) {
-          break;
+      if (!station.isEmpty()) {
+        while (true) {
+          std::cout << "> Number = ", std::cin >> number;
+          if (number > 0) {
+            break;
+          }
+          std::cout << "Error: The train number must be greater than zero.";
         }
-        std::cout << "Error: Value must be in the range [1...∞].";
+        std::cout << '\n';
       }
-      std::cout << '\n';
       station.printTrains(number);
       break;
     }
@@ -210,7 +214,7 @@ int main() {
       std::cout << "Goodbye ;)\n";
       return 0;
     default:
-      std::cerr << "Error: Value must be in the range [1...3].\n";
+      std::cerr << "Error: Value must be in the range [1...6].\n";
       printMenu = false;
       break;
     }
