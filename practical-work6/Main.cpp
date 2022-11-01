@@ -1,6 +1,6 @@
 //
 // Object-oriented programing (college 4th course)
-// Practice: Practical work 8
+// Practical work 6
 //
 
 #include <iostream>
