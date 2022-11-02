@@ -1,13 +1,14 @@
 project(Practice)
 
-add_subdirectory(practical-work1)
-add_subdirectory(practical-work2)
-add_subdirectory(practical-work3)
-add_subdirectory(practical-work4)
-add_subdirectory(practical-work5)
-add_subdirectory(practical-work6)
-add_subdirectory(practical-work7)
-add_subdirectory(practical-work8)
+add_subdirectory(practical-work01)
+add_subdirectory(practical-work02)
+add_subdirectory(practical-work03)
+add_subdirectory(practical-work04)
+add_subdirectory(practical-work05)
+add_subdirectory(practical-work06)
+add_subdirectory(practical-work07)
+add_subdirectory(practical-work08)
+add_subdirectory(practical-work09)
 
 add_custom_target(${PROJECT_NAME})
 add_dependencies(${PROJECT_NAME}
@@ -19,4 +20,5 @@ add_dependencies(${PROJECT_NAME}
   PracticePracticalWork6
   PracticePracticalWork7
   PracticePracticalWork8
+  PracticePracticalWork9
 )
