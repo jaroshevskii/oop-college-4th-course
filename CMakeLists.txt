@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 
 project(OOPCollege3rdCourse
-  LANGUAGES CXX Swift
-)
+  LANGUAGES CXX Swift)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,14 +16,24 @@ add_subdirectory(practical-work6)
 
 add_subdirectory(practice)
 
-add_custom_target(${PROJECT_NAME})
-add_dependencies(${PROJECT_NAME}
-  PracticalWork1
-  PracticalWork2
-  PracticalWork3
-  PracticalWork4
-  PracticalWork5
-  PracticalWork6
+# add_custom_target(${PROJECT_NAME})
+# add_dependencies(${PROJECT_NAME}
+#   PracticalWork1
+#   PracticalWork2
+#   PracticalWork3
+#   PracticalWork4
+#   PracticalWork5
+#   PracticalWork6
 
-  Practice
-)
+#   Practice
+# )add_custom_target(${PROJECT_NAME})
+# add_dependencies(${PROJECT_NAME}
+#   PracticalWork1
+#   PracticalWork2
+#   PracticalWork3
+#   PracticalWork4
+#   PracticalWork5
+#   PracticalWork6
+
+#   Practice
+# )
