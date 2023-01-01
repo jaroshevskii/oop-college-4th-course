@@ -14,26 +14,4 @@ add_subdirectory(practical-work4)
 add_subdirectory(practical-work5)
 add_subdirectory(practical-work6)
 
-add_subdirectory(practice)
-
-# add_custom_target(${PROJECT_NAME})
-# add_dependencies(${PROJECT_NAME}
-#   PracticalWork1
-#   PracticalWork2
-#   PracticalWork3
-#   PracticalWork4
-#   PracticalWork5
-#   PracticalWork6
-
-#   Practice
-# )add_custom_target(${PROJECT_NAME})
-# add_dependencies(${PROJECT_NAME}
-#   PracticalWork1
-#   PracticalWork2
-#   PracticalWork3
-#   PracticalWork4
-#   PracticalWork5
-#   PracticalWork6
-
-#   Practice
-# )
+add_subdirectory(Practice)
