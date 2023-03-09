@@ -8,7 +8,7 @@
 
 class Triangle {
 private:
-  double a = 0, b = 0, c = 0;
+  double a = 0.0, b = 0.0, c = 0.0;
 
 public:
   Triangle() = default;
